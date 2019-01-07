@@ -46,7 +46,7 @@
 
 // console.log(link);
 
-
+// ***********************************************//
 //Video - 6
 
 // const links = document.getElementsByClassName('link');
@@ -87,23 +87,125 @@
 // console.log(imageArray);
 
 
-
+// ***********************************************//
 // Video - 7
 
 
-const card = document.querySelector('.card');
-console.log(card);
+// const card = document.querySelector('.card');
+// console.log(card);
 
-const card2 = document.querySelectorAll('.card');
-console.log(card2);
+// const card2 = document.querySelectorAll('.card');
+// console.log(card2);
 
-//Nodelist is similar to array
+// //Nodelist is similar to array
 
-const card3 = document.querySelectorAll('.card h4');
-console.log(card3);
+// const card3 = document.querySelectorAll('.card h4');
+// console.log(card3);
 
-const card4 = document.querySelectorAll('.card h4');
-console.log(card4[0].textContent);
+// const card4 = document.querySelectorAll('.card h4');
+// console.log(card4[0].textContent);
+
+
+// // // convert html collection or nodeList to an array
+// const coursesArray = Array.from(card4);
+
+// coursesArray.forEach(function(courses){
+// 	console.log(courses.textContent);
+// });
+
+
+// //select odd links
+
+// const oddLinks = document.querySelectorAll('#primary a:nth-child(odd)');
+
+// oddLinks.forEach(function(odd) {
+// 	odd.style.backgroundColor = 'red';
+// 	odd.style.color = 'white';
+// });
+
+
+// //select even links
+// const eventLinks = document.querySelectorAll('#primary a:nth-child(even)');
+
+// eventLinks.forEach(function(even) {
+// 	even.style.backgroundColor = 'blue';
+// 	even.style.color = 'white';
+// });
+
+
+// //change all the add to cart buttons
+
+// const addCartBtns = document.querySelectorAll('.add-to-cart');
+
+
+// addCartBtns.forEach(function(btn) {
+// 	btn.textContent = 'Something new';
+// })
+
+// console.log(addCartBtns);
 
 
 
+// ***********************************************//
+//Video - 8
+
+//Traversing the dom
+
+
+// const navigation = document.querySelector('#primary');
+
+// console.log(navigation);
+
+// let element;
+
+// //To print the nodeList along with spaces in the code (video -8)
+// //Not recomendded
+// element = navigation.childNodes;
+
+
+// //It will print only five different elements
+// element = navigation.children;
+// element2 = navigation.children[0].nodeName;
+// element3 = navigation.children[0].nodeType;
+
+// //1-Element
+// //2-Attribute
+// //3-Text Nodes
+// //8-comments
+// //9-document
+// //10-doctype
+
+// console.log(element);
+// console.log(element2,element3);
+
+// element4 = navigation.children[0].textContent = 'New Text';
+// console.log(element4);
+
+
+// element5 = navigation.children[4].children;
+// console.log(element5);
+
+
+// ***********************************************//
+//Video - 9
+
+const coursesList = document.querySelector('#courses-list');
+
+let element;
+
+element = coursesList.children[1].children[0].children[0].children[1];
+
+element2 = coursesList.children[1].children[0].children[0].children[1].lastChild;//returns a text(which is a whitespace)
+
+element3 = coursesList.children[1].children[0].children[0].children[1].lastElementChild;//print last html element in it 
+
+
+element4 = coursesList.children[1].children[0].children[0].children[1].firstElementChild;
+
+element5 = coursesList.children[1].children[0].children[0].children[1].childElementCount;
+
+console.log(element);
+console.log(element2);
+console.log(element3);
+console.log(element4);
+console.log(element5);
