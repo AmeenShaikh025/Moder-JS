@@ -189,7 +189,7 @@
 // ***********************************************//
 //Video - 9
 
-const coursesList = document.querySelector('#courses-list');
+/*const coursesList = document.querySelector('#courses-list');
 
 let element;
 
@@ -208,4 +208,201 @@ console.log(element);
 console.log(element2);
 console.log(element3);
 console.log(element4);
-console.log(element5);
+console.log(element5);*/
+
+
+// ***********************************************//
+//Video - 10
+
+//Tranversing from children to parent
+
+// const cartBtn = document.querySelector('.add-to-cart');
+
+// let element;
+
+// element = cartBtn;
+// element = cartBtn.parentNode;
+// //OR
+
+// element = cartBtn.parentElement.parentElement; //use this instead
+
+// element = cartBtn.parentElement.parentElement.children[0];
+
+
+// //sibling
+
+// element = cartBtn.parentNode;
+
+// element = cartBtn.previousSibling;//will display white space
+// element = cartBtn.previousElementSibling.previousElementSibling;//it will ignore white-space, and show valid html tags.
+
+
+// // console.dir(element);
+// console.log(element);
+// console.log(cartBtn.parentElement);
+
+
+// // ***********************************************//
+// //Video - 11
+
+
+// //Course name
+// const courseName = cartBtn.parentElement.querySelector('h4');
+
+// //Next element sibling
+
+// element = courseName.nextElementSibling;
+// console.log(element);
+// console.log(courseName);
+
+
+// ***********************************************//
+//Video - 12
+
+//Create element with JS (****IMPORTANT TOPIC****)
+
+
+// const newLink = document.createElement('a');
+
+// //add class
+// newLink.className = 'links';
+
+// //add href
+// newLink.href = '#';
+
+// //OR
+
+// //newLink.setAttribute('href', '#');//outdated
+
+// //add text
+// // newLink.textContent = "Contact"
+
+// newLink.appendChild( document.createTextNode('New Link'));
+
+
+// //Add the element to the HTML
+
+// document.querySelector('#primary').appendChild(newLink);
+
+// console.log(newLink);
+
+
+
+// ***********************************************//
+//Video - 13
+
+// Replace an element with js
+
+/*const newHeading = document.createElement('h2');
+
+//add an id
+newHeading.id = 'heading';
+
+//add a class
+//newHeading.className = 'heading';
+//OR
+newHeading.classList.add('heading');
+
+//add the new text
+newHeading.appendChild( document.createTextNode('The Best Courses'));
+
+//Select all headings
+const oldHeading = document.querySelector('#heading');
+
+//got to Parent
+const coursesList = document.querySelector('#courses-list');
+
+//Then, replace!
+coursesList.replaceChild(newHeading, oldHeading);
+
+
+console.log(newHeading);*/
+
+
+
+// ***********************************************//
+//Video - 14
+
+//Remove elements with JS
+
+/*const links = document.querySelectorAll('.link');
+
+//Remove element by itself
+links[0].remove();
+
+const cards = document.querySelectorAll('.card');
+cards[11].remove();
+
+console.log(links);
+console.log(cards);
+
+
+//Remove by children
+
+const navigation = document.querySelector('#primary');
+
+const linkz = document.querySelectorAll('#primary .link');
+
+navigation.removeChild(links[4]);
+
+console.log(navigation);
+console.log(linkz);*/
+
+
+
+
+// ***********************************************//
+//Video - 15
+
+
+//Classes, Id_s and other attributes
+
+/*const link = document.querySelector('.link');
+let element;
+
+element = link;
+
+//read the class
+element = link.className;
+
+//REad the class (DOM Token List)
+element = link.classList;
+
+//Access a specific class with class list
+element = link.classList[0];
+
+//add a new class
+link.classList.add('new-class');*/
+
+// console.log(element);
+
+
+
+// ***********************************************//
+//Video - 16
+
+//Part -2
+//remove the class
+/*link.classList.remove('link');
+
+
+//IDs
+link.id = 'new-id';//it will remove the id value
+
+//Remove the ID
+link.id = '';
+//OR
+link.removeAttribute('id');//it will remove everything
+
+//Attribute functions
+element = link.getAttribute('href');
+element = link.getAttribute('class');
+element = link.setAttribute('href', 'http://facebook.com');
+element = link.setAttribute('target', '_blank');
+
+//IN HTML5 WE CAN CREATE CUSTOM ATTRIBUTES
+element = link.setAttribute('data-link', '10');
+element = link.hasAttribute('data-link');
+element = link.removeAttribute('data-link');
+
+console.log(element);*/
