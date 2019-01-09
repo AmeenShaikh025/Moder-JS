@@ -176,7 +176,7 @@ console.log(searchInput);*/
 //Event Bubbling
 
 //variables
-const card = document.querySelector('.card'),
+/*const card = document.querySelector('.card'),
 	  infocards = document.querySelector('.info-card'),
 	  addCartBtn = document.querySelector('.add-to-cart');
 
@@ -196,7 +196,7 @@ infocards.addEventListener('click', function(e) {
 addCartBtn.addEventListener('click', function(e) {
 	console.log('clicked the add to cart button');
 	e.stopPropagation();
-});
+});*/
 
 //Problem:
 //The events are going to bubble and affect the parent like above
@@ -213,4 +213,37 @@ addCartBtn.addEventListener('click', function(e) {
 //Event Bubbling (Delagation)
 
 
+// document.body.addEventListener('click', removeProductFromCart);
 
+const shoppingCart = document.querySelector('#shopping-cart');
+
+shoppingCart.addEventListener('click', removeProductFromCart);
+
+
+function removeProductFromCart(e) {
+	// console.log(e);
+	console.log(e.target.classList);
+	// console.log(e.target.className);
+
+	if(e.target.classList.contains('remove')) {
+		// console.log('Yes!!');
+		console.log(e.target.parentElement.parentElement.remove);
+		e.target.parentElement.parentElement.remove();
+	}
+	else {
+		console.log('No');
+	}
+}
+
+
+//Add to Cart
+
+const courseList = document.querySelector('#courses-list');
+
+courseList.addEventListener('click', addToCart);
+
+function addToCart(e) {
+	if(e.target.classList.contains('add-to-cart')){
+		console.log('course added');
+	}
+}
